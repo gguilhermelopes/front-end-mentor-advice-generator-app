@@ -6,7 +6,7 @@ function getAdvice() {
   fetch("https://api.adviceslip.com/advice")
     .then((r) => r.json())
     .then((r) => {
-      advice.innerText = r.slip.advice;
+      advice.innerText = `“${r.slip.advice}”`;
       adviceId.innerText = `#${r.slip.id}`;
     });
 }
